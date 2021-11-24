@@ -4,8 +4,8 @@ with open("Input/Letters/starting_letter.txt") as starting_letter:
 with open("Input/Names/invited_names.txt") as invited_names:
     while invited_person := invited_names.readline().rstrip():
         letter = orginal_letter.replace('[name]', f"{invited_person}")
-        with open(f"Output/ReadyToSend/letter_for_{invited_person}.txt", mode='w') as output_file:
-            output_file.write(letter)
+        with open(f"Output/ReadyToSend/letter_for_{invited_person}.txt", mode='w') as completed_letter:
+            completed_letter.write(letter)
 
 # for each name in invited_names.txt
 # Replace the [name] placeholder with the actual name.
